@@ -23,7 +23,7 @@ const UseCase02 = () => {
             <img
               src="/src/assets/UseCase02-img.png"
               alt="Use Case 02 Diagram"
-              className="img-responsive max-h-48 sm:max-h-56 lg:max-h-72 w-full lg:w-auto"
+              className="img-responsive max-h-48 sm:max-h-56 lg:max-h-42 lg:mt-4 w-full lg:w-auto"
             />
           </div>
         </div>
