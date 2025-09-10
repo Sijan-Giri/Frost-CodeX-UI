@@ -1,4 +1,5 @@
 import { useRef, useEffect, useState } from "react";
+import { ChevronDown } from "lucide-react";
 
 const CodexCoreSection = () => {
   const terminologyRef = useRef<HTMLDivElement | null>(null);
@@ -11,7 +12,7 @@ const CodexCoreSection = () => {
   const taxonomyDotY = "600px";
   const leftLineX = "50px";
   const rightLineX = "calc(100% - 50px)";
-  
+
   useEffect(() => {
     if (terminologyRef.current && mainRef.current && headerRef.current) {
       const terminologyRect = terminologyRef.current.getBoundingClientRect();
@@ -26,13 +27,24 @@ const CodexCoreSection = () => {
 
   return (
     <div className="bg-white font-sans min-h-screen relative overflow-x-hidden pb-20">
-      <header ref={headerRef} className="py-4 sm:py-6 px-4 sm:px-6 lg:px-12 text-xl sm:text-2xl lg:text-3xl font-bold text-[#0B4D8B] max-w-full">
+      <header
+        ref={headerRef}
+        className="py-4 sm:py-6 px-4 sm:px-6 lg:px-12 text-xl sm:text-2xl lg:text-3xl font-bold text-[#0B4D8B] max-w-full"
+      >
         CODEX - Core concepts
       </header>
-      <main ref={mainRef} className="container max-w-7xl mx-auto relative px-4 sm:px-6 lg:px-0 overflow-x-hidden">
+
+      <main
+        ref={mainRef}
+        className="container max-w-7xl mx-auto relative px-4 sm:px-6 lg:px-0 overflow-x-hidden"
+      >
         <div
           className="absolute w-1 bg-blue-100 z-0 hidden lg:block"
-          style={{ left: leftLineX, top: headerBottom, height: `calc(${terminologyDotTop} - ${headerBottom})` }}
+          style={{
+            left: leftLineX,
+            top: headerBottom,
+            height: `calc(${terminologyDotTop} - ${headerBottom})`,
+          }}
         ></div>
 
         <div
@@ -43,30 +55,20 @@ const CodexCoreSection = () => {
         </div>
 
         <div
-          className="absolute w-1 z-0 hidden lg:block"
+          className="absolute w-1 z-0 hidden lg:block bg-gradient-to-b from-blue-500 via-purple-400 to-orange-400"
           style={{
             left: leftLineX,
             top: terminologyDotTop,
             height: `calc(${horizontalConnectorY} - ${terminologyDotTop})`,
-            background: `linear-gradient(to bottom, 
-              #3B82F6 0%, 
-              #7A94FF 40%, 
-              #AB8BFF 70%, 
-              #FB923C 100%)`,
           }}
         ></div>
 
         <div
-          className="absolute w-1 z-0 hidden lg:block"
+          className="absolute w-1 z-0 hidden lg:block bg-gradient-to-b from-orange-400 via-purple-400 to-blue-500"
           style={{
             left: rightLineX,
             top: horizontalConnectorY,
             height: `calc(${taxonomyDotY} - ${horizontalConnectorY})`,
-            background: `linear-gradient(to bottom, 
-              #FB923C 0%, 
-              #AB8BFF 40%, 
-              #7A94FF 70%, 
-              #3B82F6 100%)`,
           }}
         ></div>
 
@@ -87,16 +89,11 @@ const CodexCoreSection = () => {
         ></div>
 
         <div
-          className="absolute h-1 z-0 hidden lg:block"
+          className="absolute h-1 z-0 hidden lg:block bg-gradient-to-r from-orange-400 via-yellow-500 to-blue-500"
           style={{
             left: leftLineX,
             right: `calc(100% - ${rightLineX})`,
             top: horizontalConnectorY,
-            background: `linear-gradient(to right, 
-              #FB923C 0%, 
-              #FCA326 30%, 
-              #B37BFF 70%, 
-              #3B82F6 100%)`,
           }}
         ></div>
 
@@ -105,8 +102,8 @@ const CodexCoreSection = () => {
           className="relative flex flex-col lg:flex-row items-start py-6 sm:py-8 lg:pl-[calc(50px+2rem)] lg:pr-12 mt-6 sm:mt-8 lg:mt-12"
         >
           <div className="w-full lg:w-1/2 lg:pr-12 mb-6 lg:mb-0">
-           <h2 className="text-lg sm:text-xl lg:text-2xl font-semibold mb-4 bg-gradient-to-r from-[#0B4D8B] to-[#40A9FF] bg-clip-text text-transparent">
-            Terminology
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-semibold mb-4 text-gradient">
+              Terminology
             </h2>
             <p className="mb-3 text-sm sm:text-base text-gray-600 leading-relaxed">
               Terminology refers to the list of unique terms that can be used
@@ -123,47 +120,28 @@ const CodexCoreSection = () => {
               called CODEX.
             </p>
             <div className="mt-4 text-blue-500 cursor-pointer flex items-center">
-              <svg
-                className="w-4 h-4 mr-1"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
+              <ChevronDown className="w-4 h-4 mr-1" />
             </div>
           </div>
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end items-start lg:pl-12 p-4 sm:p-6 lg:p-10 lg:pt-11">
             <img
               src="/src/assets/terminology-img.png"
               alt="Terminology Screenshot"
-              className="max-w-full h-auto"
+              className="img-responsive"
             />
           </div>
         </div>
 
-        <div
-          className="relative flex flex-col lg:flex-row items-start py-6 sm:py-8 lg:pr-[calc(50px+2rem)] lg:pl-12"
-          style={{
-            marginTop: "40px",
-            marginBottom: "10px",
-          }}
-        >
+        <div className="relative flex flex-col lg:flex-row items-start py-6 sm:py-8 lg:pr-[calc(50px+2rem)] lg:pl-12 mt-10 mb-2.5">
           <div className="w-full lg:w-1/2 pr-0 lg:pr-12 flex justify-center items-center mb-6 lg:mb-0 p-4 sm:p-6">
             <img
               src="/src/assets/Taxonomy.png"
               alt="Taxonomy Diagram"
-              className="max-w-full h-auto"
+              className="img-responsive"
             />
           </div>
           <div className="w-full lg:w-1/2 pl-0 lg:pl-12">
-            <h2 className="text-lg sm:text-xl lg:text-2xl font-semibold mb-4 bg-gradient-to-r from-[#0B4D8B] to-[#40A9FF] bg-clip-text text-transparent">
+            <h2 className="text-lg sm:text-xl lg:text-2xl font-semibold mb-4 text-gradient">
               Taxonomy
             </h2>
             <p className="mb-3 text-sm sm:text-base text-gray-600 leading-relaxed">
@@ -175,20 +153,7 @@ const CodexCoreSection = () => {
               Within a taxonomy, each term is used only once.
             </p>
             <div className="mt-4 text-orange-500 cursor-pointer flex items-center">
-              <svg
-                className="w-4 h-4 mr-1"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M19 9l-7 7-7-7"
-                />
-              </svg>
+              <ChevronDown className="w-4 h-4 mr-1" />
             </div>
           </div>
         </div>

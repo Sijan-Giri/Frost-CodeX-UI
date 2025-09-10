@@ -1,1 +1,29 @@
 @import "tailwindcss";
+
+.bg-overlay {
+  @apply absolute inset-0 bg-[#0a2a4a]/70;
+}
+
+.img-responsive {
+  @apply max-w-full h-auto object-contain;
+}
+
+.text-gradient {
+  @apply bg-gradient-to-r from-[#0B4D8B] to-[#40A9FF] bg-clip-text text-transparent;
+}
+
+.padding-common {
+  @apply px-4 sm:px-6 lg:px-12 py-8 lg:py-6;
+}
+
+.flex-center-start {
+  @apply flex justify-center lg:justify-start;
+}
+
+.flex-center-end {
+  @apply flex justify-center lg:justify-end;
+}
+
+.flex-center {
+  @apply flex justify-center items-center;
+}
