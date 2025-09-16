@@ -1,6 +1,12 @@
+import useCase01Bg from "../../assets/UseCase01-background-img.jpg";
+import useCase01Img from "../../assets/UseCase01-img.png";
+
 const UseCase01 = () => {
   return (
-    <div className="relative flex items-center justify-center bg-[url('/src/assets/UseCase01-background-img.jpg')] bg-cover bg-center overflow-hidden p-4 lg:p-0 md:min-h-[550px]">
+    <div
+      className="relative flex items-center justify-center bg-cover bg-center overflow-hidden p-4 lg:p-0 md:min-h-[550px]"
+      style={{ backgroundImage: `url(${useCase01Bg})` }}
+    >
       <div className="bg-overlay"></div>
 
       <div className="relative z-10 w-full padding-common text-white">
@@ -20,7 +26,7 @@ const UseCase01 = () => {
 
           <div className="flex justify-center">
             <img
-              src="/src/assets/UseCase01-img.png"
+              src={useCase01Img}
               alt="Use Case 01 Diagram"
               className="img-responsive max-h-30 sm:max-h-56 lg:max-h-42 lg:mt-14 w-full lg:w-auto"
             />

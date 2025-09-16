@@ -1,5 +1,7 @@
 import { useRef, useEffect, useState } from "react";
 import { ChevronDown } from "lucide-react";
+import terminologyImg from "../../assets/terminology-img.png";
+import taxonomyImg from "../../assets/Taxonomy.png";
 
 const CodexCoreSection = () => {
   const terminologyRef = useRef<HTMLDivElement | null>(null);
@@ -125,7 +127,7 @@ const CodexCoreSection = () => {
           </div>
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end items-start lg:pl-12 p-4 sm:p-6 lg:p-10 lg:pt-11">
             <img
-              src="/src/assets/terminology-img.png"
+              src={terminologyImg}
               alt="Terminology Screenshot"
               className="img-responsive"
             />
@@ -135,7 +137,7 @@ const CodexCoreSection = () => {
         <div className="relative flex flex-col lg:flex-row items-start py-6 sm:py-8 lg:pr-[calc(50px+2rem)] lg:pl-12 mt-10 mb-2.5">
           <div className="w-full lg:w-1/2 pr-0 lg:pr-12 flex justify-center items-center mb-6 lg:mb-0 p-4 sm:p-6">
             <img
-              src="/src/assets/Taxonomy.png"
+              src={taxonomyImg}
               alt="Taxonomy Diagram"
               className="img-responsive"
             />

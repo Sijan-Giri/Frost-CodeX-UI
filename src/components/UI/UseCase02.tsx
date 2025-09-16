@@ -1,6 +1,12 @@
+import useCaseBg from "../../assets/UseCase01-background-img.jpg";
+import useCase02Img from "../../assets/UseCase02-img.png";
+
 const UseCase02 = () => {
   return (
-    <div className="relative flex items-center justify-center overflow-hidden md:min-h-[550px] bg-cover bg-center bg-[url('/src/assets/UseCase01-background-img.jpg')]">
+    <div
+      className="relative flex items-center justify-center overflow-hidden md:min-h-[550px] bg-cover bg-center"
+      style={{ backgroundImage: `url(${useCaseBg})` }} 
+    >
       <div className="bg-overlay"></div>
 
       <div className="relative z-10 w-full text-white padding-common">
@@ -13,15 +19,15 @@ const UseCase02 = () => {
 
           <div className="flex-center-end">
             <p className="text-sm sm:text-base lg:text-lg xl:text-xl leading-relaxed max-w-3xl text-center lg:text-right">
-              Data from integrated applications is forwarded to the CODEX system. 
-              The CODEX system then automatically assigns terminology (if needed) 
+              Data from integrated applications is forwarded to the CODEX system.
+              The CODEX system then automatically assigns terminology (if needed)
               and builds taxonomy chains. This knowledge bank becomes the data catalog.
             </p>
           </div>
 
           <div className="flex justify-center">
             <img
-              src="/src/assets/UseCase02-img.png"
+              src={useCase02Img}
               alt="Use Case 02 Diagram"
               className="img-responsive max-h-48 sm:max-h-56 lg:max-h-42 lg:mt-4 w-full lg:w-auto"
             />

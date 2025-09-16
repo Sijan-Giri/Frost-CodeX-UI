@@ -1,6 +1,13 @@
+import useCaseBg from "../../assets/UseCase01-background-img.jpg";
+import diagram1 from "../../assets/UseCase03-diagram1.png";
+import bioTechImg from "../../assets/BioTechnology-img.png";
+
 const UseCase03 = () => {
   return (
-    <div className="relative flex items-center justify-center bg-cover bg-center md:min-h-[1200px] min-h-[550px] bg-[url('/src/assets/useCase01-background-img.jpg')]">
+    <div
+      className="relative flex items-center justify-center bg-cover bg-center md:min-h-[1200px] min-h-[550px]"
+      style={{ backgroundImage: `url(${useCaseBg})` }}
+    >
       <div className="bg-overlay"></div>
 
       <div className="w-full z-10 text-white px-3 sm:px-6 md:px-12 lg:px-20">
@@ -14,7 +21,7 @@ const UseCase03 = () => {
 
           <div className="flex justify-center lg:justify-start order-1 lg:order-none mt-4 sm:mt-6 md:mt-8 lg:mt-0">
             <img
-              src="/src/assets/UseCase03-diagram1.png"
+              src={diagram1}
               alt="Network Diagram"
               className="img-responsive sm:max-h-[250px] md:max-h-[300px] lg:max-h-[400px] w-auto"
             />
@@ -36,7 +43,7 @@ const UseCase03 = () => {
 
           <div className="flex justify-center lg:justify-end lg:col-start-2 lg:row-start-3 order-3 lg:order-none mt-4 sm:mt-6 md:mt-8 lg:mt-0">
             <img
-              src="/src/assets/BioTechnology-img.png"
+              src={bioTechImg}
               alt="Biotechnology Network Diagram"
               className="img-responsive sm:max-h-[250px] md:max-h-[300px] lg:max-h-[400px] w-auto"
             />
